@@ -12,15 +12,15 @@ from pyrogram.errors import (
 )
 from spamwatch.types import Ban
 
-from userge import Config, Message, filters, get_collection, pool, userge
-from userge.utils import get_response, mention_html
+from DaisyX import Config, Message, filters, get_collection, pool, DaisyX
+from DaisyX.utils import get_response, mention_html
 
 SAVED_SETTINGS = get_collection("CONFIGS")
 GBAN_USER_BASE = get_collection("GBAN_USER")
 WHITELIST = get_collection("WHITELIST_USER")
 CHANNEL = userge.getCLogger(__name__)
 LOG = userge.getLogger(__name__)
-
+ 
 
 async def _init() -> None:
     s_o = await SAVED_SETTINGS.find_one({"_id": "ANTISPAM_ENABLED"})
